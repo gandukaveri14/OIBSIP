@@ -57,8 +57,8 @@ def get_weather(city):
 def main():
     print("===== BASIC WEATHER APP =====")
 
-    if API_KEY == "a91c16ba5882b633d940657ff0946129":
-        print("Please add your OpenWeatherMap API key first.")
+    if not API_KEY:
+        print("Please set your OPENWEATHER_API_KEY environment variable first.")
         return
 
     city = input("Enter a city name: ").strip()
